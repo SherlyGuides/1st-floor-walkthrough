@@ -103,6 +103,9 @@ export class Walkable {
     if (this.garden) { this.scene.remove(this.garden); this.garden = null; }
     this.ceiling = this.ground = this.grid = null; this.edges = null; this.batched = false; this.mixer = null; this.doors = null; this.doorMeshes = []; this.select(null);
   }
+  // The view angle for a screen shape: 60 degrees top to bottom on wide screens; on tall ones (a phone held upright)
+  // it opens up so the view stays about 65 degrees across instead of narrowing to a zoomed-in slice (up to 100 tall).
+  static fovFor(aspect) { return aspect >= 1 ? 60 : Math.min(100, Math.max(60, 2 * THREE.MathUtils.radToDeg(Math.atan(Math.tan(THREE.MathUtils.degToRad(32.5)) / aspect)))); }
   static get isIOS() { return /iP(hone|ad|od)/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1); }
   static shrinkTextures(root, max) {
     const done = new Set(); root.traverse(o => { if (!o.isMesh) return; for (const m of [].concat(o.material)) for (const k of ['map', 'normalMap', 'roughnessMap', 'metalnessMap', 'emissiveMap', 'aoMap', 'alphaMap']) {
@@ -804,7 +807,7 @@ export class Walkable {
   }
   frame() {
     const c = this.canvas, r = this.renderer; const w = c.clientWidth, h = c.clientHeight, pr = r.getPixelRatio();
-    if (c.width !== Math.floor(w * pr) || c.height !== Math.floor(h * pr)) { r.setSize(w, h, false); this.camera.aspect = w / h; this.camera.updateProjectionMatrix(); }
+    if (c.width !== Math.floor(w * pr) || c.height !== Math.floor(h * pr)) { r.setSize(w, h, false); this.camera.aspect = w / h; this.camera.fov = Walkable.fovFor(w / h); this.camera.updateProjectionMatrix(); }
     const dt = Math.min(this.clock.getDelta(), 0.25);   // real time, so a slow device walks as fast as a quick one (a long pause, e.g. a hidden tab, counts as 0.25 s)
     if (this.mixer && this.data.model.animations !== false) this.mixer.update(dt);
     this.stepLayout(performance.now()); this.stepDoors(dt); this.adapt(dt);
