@@ -9,7 +9,7 @@
 <meta property="og:url" content="https://sherlyguides.github.io/1st-floor-walkthrough/">
 <title>1st floor FINAL</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%231B1A16%22%20stroke-width%3D%222.2%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cstyle%3E%40media%20(prefers-color-scheme%3A%20dark)%7Bpath%7Bstroke%3A%23EDEBE5%7Dcircle%7Bfill%3A%2386BBA4%7D%7D%3C%2Fstyle%3E%3Cpath%20d%3D%22M9.5%2020.5H7.5a4%204%200%200%201-4-4v-9a4%204%200%200%201%204-4h9a4%204%200%200%201%204%204v9a4%204%200%200%201-4%204h-2%22%2F%3E%3Cpath%20d%3D%22M12%2021v-4.5a4.5%204.5%200%200%200-4.5-4.5%22%2F%3E%3Ccircle%20cx%3D%228.5%22%20cy%3D%228.5%22%20r%3D%222.2%22%20fill%3D%22%232F5E4E%22%20stroke%3D%22none%22%2F%3E%3C%2Fsvg%3E%0A" type="image/svg+xml">
-<link rel="stylesheet" href="walkable/css/walkable.css?v=mv54mdra">
+<link rel="stylesheet" href="walkable/css/walkable.css?v=mvdrx6oi">
 <style>
   html, body { height:100%; overflow:hidden; }
   body { position:relative; height:100dvh; }
@@ -61,6 +61,7 @@
   .tour .t-act button { height:32px; border-radius:9px; font-size:12.5px; }
   .tour .t-skip { background:transparent; border-color:transparent; box-shadow:none; color:rgba(255,255,255,.7); } .tour .t-skip:hover { color:#fff; background:rgba(255,255,255,.08); }
   .tour .t-next { background:#fff; color:#151512; border-color:#fff; }
+  .tour .t-keys { flex-direction:column; align-items:stretch; gap:7px; } .tour .t-row { display:flex; align-items:center; gap:10px; } .tour .t-row b { font-weight:500; color:#fff; }
   .tour .t-hint { font-size:11.5px; color:rgba(255,255,255,.6); }
   .tour-glow { animation:tourglow 1.4s ease-in-out infinite; border-radius:16px; }
   @keyframes tourglow { 0%, 100% { box-shadow:0 0 0 0 rgba(255,255,255,0); } 50% { box-shadow:0 0 0 6px rgba(255,255,255,.35); } }
@@ -121,7 +122,7 @@
 <div id="lockup" class="panel lockup" hidden role="button" tabindex="0" aria-label="Show or hide the title"><img id="logo" alt="" hidden><span class="sep" id="lockSep" hidden></span><div class="text"><div class="title" id="name"></div><div class="mut" id="caption"></div></div></div>
 <button class="panel help-btn" id="helpBtn" hidden aria-label="How to move around"><svg class="i i-lg"><use href="#help"/></svg></button>
 <div class="pop sheet" id="helpSheet" hidden>
-  <div class="spread"><div class="heading">Moving around</div><button class="sm ghost" id="tourAgain">Show the tour again</button></div>
+  <div class="spread"><div class="heading">Moving around</div><button class="sm ghost" id="tourAgain">Show the controls</button></div>
   <div class="keys" id="keysDesk">
     <span><span class="kbd">Drag</span></span><span>Turn the model</span>
     <span><span class="kbd">Scroll</span></span><span>Zoom</span>
@@ -167,7 +168,7 @@
   <button id="cNotes" hidden aria-pressed="true"><svg class="i"><use href="#pin"/></svg><span>Notes</span></button>
   <button id="cFiles" hidden><svg class="i"><use href="#clip"/></svg><span>Files</span></button>
 </div></div>
-<a id="wm" class="watermark" href="https://sherlyguides.github.io/walkables/" target="_blank" rel="noopener" hidden><svg class="i"><use href="#mark"/></svg>Made with walkable</a>
+<a id="wm" class="watermark" href="/" target="_blank" rel="noopener" hidden><svg class="i"><use href="#mark"/></svg>Made with walkable</a>
 <div id="markers"></div>
 <div id="gate" class="gate" hidden><div class="pop card">
   <img id="gateLogo" class="arrive-logo" alt="" hidden>
@@ -177,12 +178,12 @@
   <button class="accent lg" id="gateBtn" hidden>Open</button>
 </div></div>
 <div id="modal" class="modal" hidden role="dialog"><div class="bar"><strong id="modalTitle"></strong><span class="row" id="modalActions"></span></div><div class="mbody" id="modalBody"></div></div>
-<script>window.WALKABLE_ICONS = ''; window.WALKABLE_STATIC = {"scene":{"version":1,"name":"1st floor FINAL","caption":"","theme":"auto","brand":{"firm":"","logo":null,"accent":"#1f4e79","invertDark":false,"watermark":true},"model":{"file":"model.glb","scale":1,"upAxis":"y","animations":true,"stats":{"triangles":8004618,"meshes":13862,"materials":229,"textures":103,"animations":0,"rawSize":[39.977,12.962,52.989],"bytes":313144652}},"start":{"pos":[50,8.172,-203.75],"yaw":0.1745,"pitch":-0.05},"player":{"eye":1.448,"speed":2.2,"wheel":false},"light":{"preset":"interior","sunElev":64,"sunAzim":215,"sunIntensity":2,"sunColor":"#fff3e2","ambient":0.34,"envIntensity":0.6,"exposure":0.92,"shadows":true,"background":"auto","interior":true,"tone":"neutral"},"env":{"ceiling":"walk","ground":true,"grid":false,"edges":true,"garden":true},"materials":{},"plaque":null,"media":[],"views":[],"notes":[],"plan":null,"attachments":[],"layouts":null,"modes":{"default":"walk","walk":true,"fly":true,"orbit":true}},"files":"walkable/","model":"model.glb?v=mv54mdra","parts":["model.1.bin?v=mv54mdra","model.2.bin?v=mv54mdra"],"size":83727836};</script>
+<script>window.WALKABLE_ICONS = ''; window.WALKABLE_STATIC = {"scene":{"version":1,"name":"1st floor FINAL","caption":"","theme":"auto","brand":{"firm":"","logo":null,"accent":"#1f4e79","invertDark":false,"watermark":true},"model":{"file":"model.glb","scale":1,"upAxis":"y","animations":true,"stats":{"triangles":7529196,"meshes":31201,"materials":185,"textures":64,"animations":1,"rawSize":[39.977,12.962,52.989],"bytes":344952928}},"start":{"pos":[50,8.172,-203.75],"yaw":0.1745,"pitch":-0.05},"player":{"eye":1.448,"speed":3.2,"wheel":false},"light":{"preset":"interior","sunElev":64,"sunAzim":215,"sunIntensity":2,"sunColor":"#fff3e2","ambient":0.34,"envIntensity":0.6,"exposure":0.92,"shadows":true,"background":"auto","interior":true,"tone":"neutral"},"env":{"ceiling":"walk","ground":true,"grid":false,"edges":true,"garden":true},"materials":{},"plaque":null,"media":[],"views":[],"notes":[],"plan":null,"attachments":[],"layouts":null,"modes":{"default":"walk","walk":true,"fly":true,"orbit":true},"visibility":"visibility.json"},"files":"walkable/","model":"model.glb?v=mvdrx6oi","parts":["model.1.bin?v=mvdrx6oi","model.2.bin?v=mvdrx6oi","model.3.bin?v=mvdrx6oi"],"size":345701416,"gz":true,"gzSize":137146564};</script>
 <script type="importmap">{ "imports": { "three": "https://unpkg.com/three@0.170.0/build/three.module.js", "three/addons/": "https://unpkg.com/three@0.170.0/examples/jsm/", "three-mesh-bvh": "https://unpkg.com/three-mesh-bvh@0.7.8/build/index.module.js" } }</script>
 <script type="module">
-import { Walkable } from './walkable/js/engine.js?v=mv54mdra';
-import { contrast } from './walkable/js/schema.js?v=mv54mdra';
-import { ic } from './walkable/js/api.js?v=mv54mdra';
+import { Walkable } from './walkable/js/engine.js?v=mvdrx6oi';
+import { contrast } from './walkable/js/schema.js?v=mvdrx6oi';
+import { ic } from './walkable/js/api.js?v=mvdrx6oi';
 const $ = (id) => document.getElementById(id);
 const STATIC = window.WALKABLE_STATIC || null;
 const slug = STATIC ? 'static' : location.pathname.split('/').filter(Boolean)[1];
@@ -218,16 +219,21 @@ async function start() {
   if (!STATIC) fetch(`/api/links/${slug}/open`, { method: 'POST', headers: { 'content-type': 'application/json', ...(pin ? { 'x-pin': pin } : {}) }, body: JSON.stringify({ vid }) }).catch(() => {});
   try {
     const modelFile = STATIC?.model || data.model.file; const parts = STATIC?.parts || [modelFile];   // large models ship split into parts and are joined byte for byte
+    let buf;
+    if (STATIC?.gz) buf = await loadPacked(files, STATIC);   // packed losslessly (gzip), unpacked here byte for byte, and kept on the device for the next visit
+    else {
     let total = STATIC?.size || 0; let chunks = []; let got = 0; let whole = total ? new Uint8Array(total) : null;   // parts go straight into one buffer: no second copy
     for (const part of parts) {
     const r = await fetch(files + part, { headers: pin ? { 'x-pin': pin } : {} }); if (!r.ok) throw new Error('model');
     if (parts.length === 1) total = +r.headers.get('content-length') || 0; const reader = r.body.getReader();
     for (;;) { const { done, value } = await reader.read(); if (done) break; if (whole && got + value.length <= whole.length) whole.set(value, got); else chunks.push(value); got += value.length; if (total) { const p = got / total; $('bar').style.width = (p * 92).toFixed(1) + '%'; $('pct').textContent = `${(got / 1048576 * (/\.js(\?|$)/.test(modelFile) ? 0.75 : 1)).toFixed(1)} of ${(total / 1048576 * (/\.js(\?|$)/.test(modelFile) ? 0.75 : 1)).toFixed(1)} MB`; } }
     }
-    let buf; if (whole && got === whole.length && !chunks.length) buf = whole; else { buf = new Uint8Array(got); let o = 0; if (whole) { buf.set(whole.subarray(0, Math.min(got, whole.length))); o = Math.min(got, whole.length); } for (const c of chunks) { buf.set(c, o); o += c.length; } } whole = null; chunks = [];
+    if (whole && got === whole.length && !chunks.length) buf = whole; else { buf = new Uint8Array(got); let o = 0; if (whole) { buf.set(whole.subarray(0, Math.min(got, whole.length))); o = Math.min(got, whole.length); } for (const c of chunks) { buf.set(c, o); o += c.length; } } whole = null; chunks = [];
+    }
     $('pct').textContent = 'Setting up the room';
     if (/\.js(\?|$)/.test(modelFile)) { const t = new TextDecoder().decode(buf); const b64 = t.slice(t.indexOf('"') + 1, t.lastIndexOf('"')); buf = new Uint8Array(await (await fetch('data:application/octet-stream;base64,' + b64)).arrayBuffer()); }
     await engine.loadModel(buf.buffer); buf = null;   // the 3D library has its own copy now
+    if (data.visibility) fetch(files + data.visibility + pq()).then(r => r.ok ? r.json() : null).then(v => v && engine.setVisibility(v)).catch(() => {});   // what can be seen from where: hidden rooms are skipped
     $('pct').textContent = 'Getting it ready for this device'; await new Promise(r => setTimeout(r, 30)); engine.optimizeForViewing();
   } catch (e) { console.error(e); gate('missing', 'The model could not be opened', 'Try again in a moment. If it keeps happening, let your architect know.'); return; }
   $('bar').style.width = '100%';
@@ -252,6 +258,34 @@ function welcome() {
   const close = () => { $('welcome').hidden = true; welcomed = true; try { sessionStorage.setItem('walkable.welcomed.' + slug, '1'); } catch {} };
   $('wWalk').onclick = () => { close(); engine.setMode('walk'); }; $('wLook').onclick = close; $('c').addEventListener('pointerdown', close, { once: true });
 }
+// ---------- packed models: gzip parts, unpacked as they arrive, cached on the device ----------
+// The parts are fetched in order and streamed through the browser's own gzip decoder into one buffer of the model's
+// exact size. Each part is kept in the Cache Storage, keyed by its versioned address, so a second visit reads it from
+// the device; parts of older versions of the same model are removed. Anything odd (no cache, a damaged copy) falls
+// back to a plain download.
+async function loadPacked(files, S, useCache = true) {
+  let cache = null; if (useCache) try { cache = await caches.open('walkable-models'); } catch {}
+  const urls = S.parts.map(p => new URL(files + p, location.href).href);
+  const out = new Uint8Array(S.size); let off = 0, got = 0, fromDevice = 0;
+  const ds = new DecompressionStream('gzip'), writer = ds.writable.getWriter(), reader = ds.readable.getReader();
+  const drain = (async () => { for (;;) { const { done, value } = await reader.read(); if (done) break; if (off + value.length > out.length) throw new Error('model size'); out.set(value, off); off += value.length; } })();
+  try {
+    for (const url of urls) {
+      let r = cache ? await cache.match(url).catch(() => null) : null; if (r) fromDevice++;
+      if (!r) { r = await fetch(url, { headers: pin ? { 'x-pin': pin } : {} }); if (!r.ok) throw new Error('model'); if (cache) cache.put(url, r.clone()).catch(() => {}); }
+      const rd = r.body.getReader();
+      for (;;) { const { done, value } = await rd.read(); if (done) break; await writer.write(value); got += value.length;
+        $('bar').style.width = (got / S.gzSize * 92).toFixed(1) + '%'; $('pct').textContent = fromDevice === urls.length ? 'Opening from this device' : `${(got / 1048576).toFixed(1)} of ${(S.gzSize / 1048576).toFixed(1)} MB`; }
+    }
+    await writer.close(); await drain; if (off !== S.size) throw new Error('model size');
+  } catch (e) {
+    try { writer.abort(); } catch {}
+    if (cache) { try { for (const u of urls) await cache.delete(u); } catch {} return loadPacked(files, S, false); }   // a damaged copy on the device: download afresh
+    throw e;
+  }
+  if (cache) try { const keep = new Set(urls), here = new Set(urls.map(u => new URL(u).pathname)); for (const k of await cache.keys()) if (here.has(new URL(k.url).pathname) && !keep.has(k.url)) await cache.delete(k); } catch {}
+  return out;
+}
 // ---------- the tour: four short steps, each one moves on when the visitor has done it ----------
 const tourKey = 'walkable.tour.' + (STATIC ? location.pathname : slug); let tourOn = false;
 function setupTour() {
@@ -261,37 +295,16 @@ function setupTour() {
   if (seen || data.modes.walk === false) return;
   if (engine.mode === 'walk') setTimeout(startTour, 500); else engine.on('mode', function once(m) { if (m === 'walk' && !tourOn) { try { if (localStorage.getItem(tourKey) === '1') return; } catch {} setTimeout(startTour, 400); } });
 }
-function startTour() {
-  if (tourOn) return; tourOn = true; $('hint').hidden = true; const hasDoors = !!(engine.doors && engine.doors.length), hasAuto = !!(engine.doors && engine.doors.some(d => d.auto));
-  const K = (...k) => k.map(x => `<span class="kbd">${x}</span>`).join('');
-  const steps = [
-    isTouch ? { title: 'Look around', text: 'Drag anywhere on the screen to turn your head.', keys: '', until: 'look' }
-            : { title: 'Look around', text: 'Click once on the room and the mouse aims your view. Click again to get your cursor back.', keys: K('Click') + ' aim &nbsp;' + K('Click') + ' cursor', until: 'look' },
-    isTouch ? { title: 'Walk', text: 'Put your thumb on the circle at the bottom left and push the way you want to go.', keys: '', until: 'walk', glow: 'stick' }
-            : data.player.wheel !== false ? { title: 'Walk', text: 'Walk with the keys, or scroll the mouse wheel to step forward and back. Walls stop you; stairs carry you up.', keys: K('W', 'A', 'S', 'D') + ' or ' + K('Scroll') + ' &nbsp;' + K('Shift') + ' faster', until: 'walk' }
-            : { title: 'Walk', text: 'Walk with the keys. Hold Shift to go faster. Walls stop you; stairs carry you up.', keys: K('W', 'A', 'S', 'D') + ' &nbsp;' + K('Shift') + ' faster', until: 'walk' },
-    hasDoors && (isTouch ? { title: 'Open doors', text: 'Tap a door to open or close it.' + (hasAuto ? ' The main entrance opens by itself as you walk up.' : ''), keys: '', until: 'door' }
-            : { title: 'Open doors', text: 'Click a door to open it. While aiming with the mouse, look at a door and press F.' + (hasAuto ? ' The main entrance opens by itself as you walk up.' : ''), keys: K('Click') + ' a door &nbsp;or&nbsp; ' + K('F'), until: 'door' }),
-    { title: 'Switch views', text: 'Orbit shows the whole floor from above, Walk puts you inside, Fly lets you float. ' + (data.plan ? 'Plan opens the floor plan. ' : '') + 'The ? at the top right has these tips any time.', keys: isTouch ? '' : K('1', '2', '3') + ' Orbit, Walk, Fly', until: null, glow: 'pill' },
-  ].filter(Boolean);
-  let i = 0, timer = null, walked = 0, lookMoves = 0; const card = $('tour');
-  const glowOff = () => ['pill', 'stick'].forEach(id => $(id).classList.remove('tour-glow'));
-  const show = () => {
-    const st = steps[i]; card.classList.remove('ok'); glowOff(); if (st.glow) $(st.glow).classList.add('tour-glow');
-    $('tStep').textContent = `Step ${i + 1} of ${steps.length}`; $('tDots').innerHTML = steps.map((_, k) => `<span class="${k === i ? 'on' : ''}"></span>`).join('');
-    $('tTitle').textContent = st.title; $('tText').textContent = st.text; $('tKeys').innerHTML = st.keys; $('tKeys').hidden = !st.keys;
-    $('tNext').textContent = i === steps.length - 1 ? 'Got it' : 'Next'; $('tHint').textContent = engine.walk.locked ? 'Enter for next' : ''; card.hidden = false; walked = 0; lookMoves = 0;
-  };
-  const done = () => { if (card.classList.contains('ok')) return; card.classList.add('ok'); clearTimeout(timer); timer = setTimeout(next, 900); };
-  const next = () => { clearTimeout(timer); if (++i >= steps.length) return finish(); show(); };
-  const finish = () => { card.hidden = true; glowOff(); tourOn = false; updateHint(); try { localStorage.setItem(tourKey, '1'); } catch {} removeEventListener('keydown', key, true); };
-  const key = (e) => { if (!tourOn) return; if (e.key === 'Enter') { e.preventDefault(); next(); } if (e.key === 'Escape' && !engine.walk.locked) finish(); };
-  addEventListener('keydown', key, true); $('tNext').onclick = next; $('tSkip').onclick = finish;
-  engine.on('look', () => { if (tourOn && steps[i] && steps[i].until === 'look' && ++lookMoves > 25) done(); });
-  engine.on('door', () => { if (tourOn && steps[i] && steps[i].until === 'door') done(); });
-  engine.on('lock', (l) => { card.classList.toggle('locked', !!l); $('tHint').textContent = l ? 'Enter for next' : ''; });
-  engine.onFrame(() => { if (!tourOn || !steps[i] || steps[i].until !== 'walk') return; if (engine.moveInput().lengthSq() > 0.2 && ++walked > 50) done(); });
-  show();
+function startTour() {   // one card: the keys and what each does, then out of the way
+  if (tourOn) return; tourOn = true; $('hint').hidden = true; const card = $('tour');
+  const row = (k, w) => `<span class="t-row">${k}<b>${w}</b></span>`, K = (x) => `<span class="kbd">${x}</span>`;
+  $('tStep').textContent = ''; $('tDots').innerHTML = ''; $('tTitle').textContent = 'Controls'; $('tText').textContent = ''; $('tText').hidden = true;
+  $('tKeys').innerHTML = (isTouch ? row(K('Circle'), 'Walk') : row(K('W'), 'Forward') + row(K('A'), 'Left') + row(K('S'), 'Back') + row(K('D'), 'Right'))
+    + (isTouch ? '' : row(K('Esc'), 'Aim with the mouse / free the cursor')) + row(K(isTouch ? 'Press screen' : 'Left click'), 'Open / close a door (they also open as you walk up)'); $('tKeys').hidden = false;
+  $('tSkip').hidden = true; $('tHint').textContent = ''; $('tNext').textContent = 'Got it'; card.hidden = false;
+  const finish = () => { card.hidden = true; tourOn = false; updateHint(); try { localStorage.setItem(tourKey, '1'); } catch {} removeEventListener('keydown', key, true); };
+  const key = (e) => { if (tourOn && (e.key === 'Enter' || (e.key === 'Escape' && !engine.walk.locked))) { e.preventDefault(); finish(); } };
+  addEventListener('keydown', key, true); $('tNext').onclick = finish;
 }
 function buildDock() {
   buildLayouts();
@@ -335,7 +348,8 @@ let touchHintShown = false;
 function updateHint() {
   const m = engine.mode; const h = $('hint'); if (m === 'orbit' || tourOn) { h.hidden = true; return; }   // the tour says it better while it is open
   if (isTouch) { if (touchHintShown) return; touchHintShown = true; h.innerHTML = 'Drag to look around<small>Use the circle to walk</small>'; h.hidden = false; setTimeout(() => h.hidden = true, 2800); return; }
-  h.hidden = engine.walk.locked; const verb = engine.walk.lockFailed ? 'Drag' : 'Click'; h.innerHTML = m === 'walk' ? verb + ' to aim with the mouse<small>Click again for the cursor · W A S D ' + (data.player.wheel !== false ? 'or scroll ' : '') + 'to walk · F opens a door</small>' : verb + ' to look around<small>W A S D to move · E up · Q down · Esc to stop</small>';
+  h.hidden = engine.walk.locked; const aim = engine.walk.wantAim ? 'Press W A S D to start aiming' : 'Press Esc to aim with the mouse';   // browsers only hand the pointer over on a key or click, never on Esc itself
+  h.innerHTML = m === 'walk' ? aim + '<small>Esc frees the cursor · W A S D ' + (data.player.wheel !== false ? 'or scroll ' : '') + 'to walk · doors open as you reach them · click a door to open or shut it</small>' : aim + '<small>W A S D to move · E up · Q down · Esc frees the cursor</small>';
 }
 // notes
 let notesOn = true; const markerEls = new Map(); let openCard = null;

@@ -2,12 +2,12 @@
 export const SCHEMA_VERSION = 1;
 
 export const LIGHT_PRESETS = {
-  daylight: { sunElev: 55, sunAzim: 210, sunIntensity: 1.4, sunColor: '#fff6e8', ambient: 0.5, envIntensity: 1.0, exposure: 1.05, shadows: true, interior: false, tone: 'aces' },
-  overcast: { sunElev: 70, sunAzim: 180, sunIntensity: 0.4, sunColor: '#f2f5fa', ambient: 1.0, envIntensity: 1.2, exposure: 1.0, shadows: false, interior: false, tone: 'aces' },
-  evening:  { sunElev: 14, sunAzim: 260, sunIntensity: 1.7, sunColor: '#ffc98a', ambient: 0.3, envIntensity: 0.6, exposure: 0.95, shadows: true, interior: false, tone: 'aces' },
-  studio:   { sunElev: 60, sunAzim: 200, sunIntensity: 0.0, sunColor: '#ffffff', ambient: 0.9, envIntensity: 1.4, exposure: 1.0, shadows: false, interior: false, tone: 'aces' },
+  daylight: { sunElev: 55, sunAzim: 210, sunIntensity: 1.4, sunColor: '#fff6e8', ambient: 0.5, envIntensity: 1.0, exposure: 1.05, shadows: true, interior: false, tone: 'aces', saturation: 1 },
+  overcast: { sunElev: 70, sunAzim: 180, sunIntensity: 0.4, sunColor: '#f2f5fa', ambient: 1.0, envIntensity: 1.2, exposure: 1.0, shadows: false, interior: false, tone: 'aces', saturation: 1 },
+  evening:  { sunElev: 14, sunAzim: 260, sunIntensity: 1.7, sunColor: '#ffc98a', ambient: 0.3, envIntensity: 0.6, exposure: 0.95, shadows: true, interior: false, tone: 'aces', saturation: 1 },
+  studio:   { sunElev: 60, sunAzim: 200, sunIntensity: 0.0, sunColor: '#ffffff', ambient: 0.9, envIntensity: 1.4, exposure: 1.0, shadows: false, interior: false, tone: 'aces', saturation: 1 },
   // indoors: light falls through the ceiling like a skylight so furniture and walls cast soft shadows; colours mapped true
-  interior: { sunElev: 64, sunAzim: 215, sunIntensity: 2.0, sunColor: '#fff3e2', ambient: 0.34, envIntensity: 0.6, exposure: 0.92, shadows: true, interior: true, tone: 'neutral' },
+  interior: { sunElev: 64, sunAzim: 215, sunIntensity: 2.0, sunColor: '#fff3e2', ambient: 0.34, envIntensity: 0.6, exposure: 0.92, shadows: true, interior: true, tone: 'neutral', saturation: 1.15 },   // saturation: a gentle lift so pastels read deeper
 };
 
 export function defaultScene() {
