@@ -7,9 +7,10 @@
 <meta property="og:title" content="1st floor FINAL">
 <meta property="og:description" content="Walk through it in your browser.">
 <meta property="og:url" content="https://sherlyguides.github.io/1st-floor-walkthrough/">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <title>1st floor FINAL</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%231B1A16%22%20stroke-width%3D%222.2%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cstyle%3E%40media%20(prefers-color-scheme%3A%20dark)%7Bpath%7Bstroke%3A%23EDEBE5%7Dcircle%7Bfill%3A%2386BBA4%7D%7D%3C%2Fstyle%3E%3Cpath%20d%3D%22M9.5%2020.5H7.5a4%204%200%200%201-4-4v-9a4%204%200%200%201%204-4h9a4%204%200%200%201%204%204v9a4%204%200%200%201-4%204h-2%22%2F%3E%3Cpath%20d%3D%22M12%2021v-4.5a4.5%204.5%200%200%200-4.5-4.5%22%2F%3E%3Ccircle%20cx%3D%228.5%22%20cy%3D%228.5%22%20r%3D%222.2%22%20fill%3D%22%232F5E4E%22%20stroke%3D%22none%22%2F%3E%3C%2Fsvg%3E%0A" type="image/svg+xml">
-<link rel="stylesheet" href="walkable/css/walkable.css?v=mvdsb1ri">
+<link rel="stylesheet" href="walkable/css/walkable.css?v=mvdt7esh">
 <style>
   html, body { height:100%; overflow:hidden; }
   body { position:relative; height:100dvh; }
@@ -24,6 +25,7 @@
   .welcome { position:absolute; left:50%; bottom:92px; transform:translateX(-50%); width:360px; max-width:calc(100% - 32px); padding:18px; z-index:25; display:grid; gap:12px; animation:rise 400ms var(--ease) both; }
   .welcome .row button { flex:1; }
   .help-btn { position:absolute; top:16px; right:16px; z-index:20; width:40px; height:40px; padding:0; border-radius:12px; }
+  .fs-btn { right:64px; }
   .sheet { position:absolute; top:64px; right:16px; width:300px; max-width:calc(100% - 32px); padding:16px; z-index:30; display:grid; gap:12px; animation:rise 200ms var(--ease); }
   .keys { display:grid; grid-template-columns:auto 1fr; gap:8px 12px; align-items:center; font-size:13px; }
   .keys > span:nth-child(odd) { display:flex; gap:3px; }
@@ -67,7 +69,7 @@
   @keyframes tourglow { 0%, 100% { box-shadow:0 0 0 0 rgba(255,255,255,0); } 50% { box-shadow:0 0 0 6px rgba(255,255,255,.35); } }
   #stick.tour-glow { border-radius:50%; }
   @media (max-width:640px) { .tour { bottom:84px; padding:14px 14px 12px; } .tour h3 { font-size:16px; } }
-  @media (max-width:640px) { .mode { left:8px; right:8px; transform:none; max-width:none; justify-content:center; } .dock { width:100%; max-width:480px; } .dock button { min-width:0; padding:0 2px; flex:1 1 0; } .dock button span { overflow:hidden; text-overflow:ellipsis; max-width:100%; } .help-btn { top:12px; right:12px; } .mode { bottom:16px; } .welcome { bottom:88px; } .watermark { bottom:auto; top:62px; right:12px; } }
+  @media (max-width:640px) { .mode { left:8px; right:8px; transform:none; max-width:none; justify-content:center; } .dock { width:100%; max-width:480px; } .dock button { min-width:0; padding:0 2px; flex:1 1 0; } .dock button span { overflow:hidden; text-overflow:ellipsis; max-width:100%; } .help-btn { top:12px; right:12px; } .fs-btn { right:60px; } .mode { bottom:16px; } .welcome { bottom:88px; } .watermark { bottom:auto; top:62px; right:12px; } }
   @media (max-width:420px) { .dock button span { font-size:10.5px; } .dock .sep { margin:8px 2px; } }
 </style>
 </head>
@@ -101,6 +103,8 @@
 <symbol id="image" viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="17" height="15" rx="2"/><circle cx="9" cy="10" r="1.8"/><path d="M20.5 15.5l-4.5-4.5-8.5 8.5"/></symbol>
 <symbol id="frame" viewBox="0 0 24 24"><rect x="4" y="7" width="16" height="12" rx="1.5"/><path d="M8.5 3.5L12 7l3.5-3.5M8 13h8"/></symbol>
 <symbol id="target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7.5"/><circle cx="12" cy="12" r="2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></symbol>
+<symbol id="expand" viewBox="0 0 24 24"><path d="M4 9V5.5A1.5 1.5 0 0 1 5.5 4H9M15 4h3.5A1.5 1.5 0 0 1 20 5.5V9M20 15v3.5a1.5 1.5 0 0 1-1.5 1.5H15M9 20H5.5A1.5 1.5 0 0 1 4 18.5V15"/></symbol>
+<symbol id="shrink" viewBox="0 0 24 24"><path d="M9 4v3.5A1.5 1.5 0 0 1 7.5 9H4M20 9h-3.5A1.5 1.5 0 0 1 15 7.5V4M15 20v-3.5a1.5 1.5 0 0 1 1.5-1.5H20M4 15h3.5A1.5 1.5 0 0 1 9 16.5V20"/></symbol>
 <symbol id="help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.4a2.5 2.5 0 1 1 3.9 2.1c-.9.6-1.5 1.1-1.5 2.4M12 17h.01"/></symbol>
 <symbol id="trash" viewBox="0 0 24 24"><path d="M4.5 7h15M10 11v5.5M14 11v5.5M6.5 7l.8 12a1.5 1.5 0 0 0 1.5 1.5h6.4a1.5 1.5 0 0 0 1.5-1.5l.8-12M9.5 7V4.5h5V7"/></symbol>
 <symbol id="lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8.5 10.5V7.5a3.5 3.5 0 0 1 7 0v3"/></symbol>
@@ -120,6 +124,8 @@
   <div class="progress"><span id="bar"></span></div><span class="pct" id="pct">Opening</span>
 </div></div>
 <div id="lockup" class="panel lockup" hidden role="button" tabindex="0" aria-label="Show or hide the title"><img id="logo" alt="" hidden><span class="sep" id="lockSep" hidden></span><div class="text"><div class="title" id="name"></div><div class="mut" id="caption"></div></div></div>
+<button class="panel help-btn fs-btn" id="fsBtn" hidden aria-label="Full screen"><svg class="i i-lg"><use id="fsIcon" href="#expand"/></svg></button>
+<div class="pop sheet" id="fsTip" hidden><div class="heading">Full screen on iPhone</div><p class="muted" style="margin:0">Safari keeps its bars on web pages. For the whole screen, tap <b>Share</b>, then <b>Add to Home Screen</b>, and open the walkthrough from there.</p></div>
 <button class="panel help-btn" id="helpBtn" hidden aria-label="How to move around"><svg class="i i-lg"><use href="#help"/></svg></button>
 <div class="pop sheet" id="helpSheet" hidden>
   <div class="spread"><div class="heading">Moving around</div><button class="sm ghost" id="tourAgain">Show the controls</button></div>
@@ -178,12 +184,12 @@
   <button class="accent lg" id="gateBtn" hidden>Open</button>
 </div></div>
 <div id="modal" class="modal" hidden role="dialog"><div class="bar"><strong id="modalTitle"></strong><span class="row" id="modalActions"></span></div><div class="mbody" id="modalBody"></div></div>
-<script>window.WALKABLE_ICONS = ''; window.WALKABLE_STATIC = {"scene":{"version":1,"name":"1st floor FINAL","caption":"","theme":"auto","brand":{"firm":"","logo":null,"accent":"#1f4e79","invertDark":false,"watermark":true},"model":{"file":"model.glb","scale":1,"upAxis":"y","animations":true,"stats":{"triangles":7529196,"meshes":31201,"materials":185,"textures":64,"animations":1,"rawSize":[39.977,12.962,52.989],"bytes":344952928}},"start":{"pos":[50,8.172,-203.75],"yaw":0.1745,"pitch":-0.05},"player":{"eye":1.448,"speed":3.2,"wheel":false},"light":{"preset":"interior","sunElev":64,"sunAzim":215,"sunIntensity":2,"sunColor":"#fff3e2","ambient":0.34,"envIntensity":0.6,"exposure":0.92,"shadows":true,"background":"auto","interior":true,"tone":"neutral"},"env":{"ceiling":"walk","ground":true,"grid":false,"edges":true,"garden":true},"materials":{},"plaque":null,"media":[],"views":[],"notes":[],"plan":null,"attachments":[],"layouts":null,"modes":{"default":"walk","walk":true,"fly":true,"orbit":true},"visibility":"visibility.json"},"files":"walkable/","model":"model.glb?v=mvdsb1ri","parts":["model.1.bin?v=mvdsb1ri","model.2.bin?v=mvdsb1ri","model.3.bin?v=mvdsb1ri"],"size":346851124,"gz":true,"gzSize":137456989};</script>
+<script>window.WALKABLE_ICONS = ''; window.WALKABLE_STATIC = {"scene":{"version":1,"name":"1st floor FINAL","caption":"","theme":"auto","brand":{"firm":"","logo":null,"accent":"#1f4e79","invertDark":false,"watermark":true},"model":{"file":"model.glb","scale":1,"upAxis":"y","animations":true,"stats":{"triangles":7529196,"meshes":31201,"materials":185,"textures":64,"animations":1,"rawSize":[39.977,12.962,52.989],"bytes":344952928}},"start":{"pos":[50,8.172,-203.75],"yaw":0.1745,"pitch":-0.05},"player":{"eye":1.448,"speed":3.2,"wheel":false},"light":{"preset":"interior","sunElev":64,"sunAzim":215,"sunIntensity":2,"sunColor":"#fff3e2","ambient":0.34,"envIntensity":0.6,"exposure":0.92,"shadows":true,"background":"auto","interior":true,"tone":"neutral"},"env":{"ceiling":"walk","ground":true,"grid":false,"edges":true,"garden":true},"materials":{},"plaque":null,"media":[],"views":[],"notes":[],"plan":null,"attachments":[],"layouts":null,"modes":{"default":"walk","walk":true,"fly":true,"orbit":true},"visibility":"visibility.json"},"files":"walkable/","model":"model.glb?v=mvdt7esh","parts":["model.1.bin?v=mvdt7esh","model.2.bin?v=mvdt7esh","model.3.bin?v=mvdt7esh"],"size":346851124,"gz":true,"gzSize":137456989};</script>
 <script type="importmap">{ "imports": { "three": "https://unpkg.com/three@0.170.0/build/three.module.js", "three/addons/": "https://unpkg.com/three@0.170.0/examples/jsm/", "three-mesh-bvh": "https://unpkg.com/three-mesh-bvh@0.7.8/build/index.module.js" } }</script>
 <script type="module">
-import { Walkable } from './walkable/js/engine.js?v=mvdsb1ri';
-import { contrast } from './walkable/js/schema.js?v=mvdsb1ri';
-import { ic } from './walkable/js/api.js?v=mvdsb1ri';
+import { Walkable } from './walkable/js/engine.js?v=mvdt7esh';
+import { contrast } from './walkable/js/schema.js?v=mvdt7esh';
+import { ic } from './walkable/js/api.js?v=mvdt7esh';
 const $ = (id) => document.getElementById(id);
 const STATIC = window.WALKABLE_STATIC || null;
 const slug = STATIC ? 'static' : location.pathname.split('/').filter(Boolean)[1];
@@ -239,7 +245,7 @@ async function start() {
   $('bar').style.width = '100%';
   engine.goToView(engine.frameView('iso'), false);
   buildDock(); buildMedia(); setupModes();
-  setTimeout(() => { $('arrive').classList.add('gone'); $('lockup').hidden = false; $('modeBar').hidden = false; $('helpBtn').hidden = false; $('wm').hidden = !b.watermark; welcome(); setupTour(); }, 250);
+  setTimeout(() => { $('arrive').classList.add('gone'); $('lockup').hidden = false; $('modeBar').hidden = false; $('helpBtn').hidden = false; setupFullscreen(); $('wm').hidden = !b.watermark; welcome(); setupTour(); }, 250);
 }
 function applyBrand() {
   const b = data.brand || {}; const root = document.documentElement; const acc = b.accent || '#2F5E4E';
@@ -340,6 +346,23 @@ function setupModes() {
   modeBtns = [...$('pill').querySelectorAll('[data-mode]')]; for (const b of modeBtns) { b.hidden = data.modes[b.dataset.mode] === false; b.onclick = () => engine.setMode(b.dataset.mode); }
   engine.on('mode', updateMode); engine.on('lock', updateHint); engine.on('interact', () => { if (engine.walk.lockFailed) $('hint').hidden = true; }); updateMode('orbit'); engine.bindJoystick($('stick'));
   addEventListener('keydown', e => { if (/INPUT|TEXTAREA/.test(e.target.tagName)) return; if (e.key === '1') engine.setMode('orbit'); if (e.key === '2' && data.modes.walk !== false) engine.setMode('walk'); if (e.key === '3' && data.modes.fly !== false) engine.setMode('fly'); if (e.key.toLowerCase() === 'p' && data.plan) openPlan(); if (e.key === '?') $('helpBtn').click(); if (e.key === 'Escape') { $('modal').hidden = true; $('viewsPop').hidden = true; $('layoutPop').hidden = true; $('helpSheet').hidden = true; } });
+}
+// ---------- full screen: the page fills the screen, browser bars and all, wherever the browser allows it ----------
+// iPhone Safari does not let a page go full screen; there the button explains Add to Home Screen, which opens the
+// walkthrough without Safari's bars (the apple-mobile-web-app meta tags above). Opened that way, no button is needed.
+function setupFullscreen() {
+  const el = document.documentElement, can = document.fullscreenEnabled || document.webkitFullscreenEnabled;
+  const standalone = navigator.standalone || matchMedia('(display-mode: standalone), (display-mode: fullscreen)').matches;
+  const iphone = Walkable.isIOS && !can; if (standalone || (!can && !iphone)) return;
+  const on = () => !!(document.fullscreenElement || document.webkitFullscreenElement);
+  const sync = () => { $('fsIcon').setAttribute('href', ($('fsIcon').getAttribute('href').split('#')[0]) + '#' + (on() ? 'shrink' : 'expand')); $('fsBtn').setAttribute('aria-label', on() ? 'Leave full screen' : 'Full screen'); };
+  document.addEventListener('fullscreenchange', sync); document.addEventListener('webkitfullscreenchange', sync);
+  $('fsBtn').hidden = false;
+  $('fsBtn').onclick = (e) => { e.stopPropagation(); $('helpSheet').hidden = true;
+    if (iphone) { $('fsTip').hidden = !$('fsTip').hidden; return; }
+    if (on()) (document.exitFullscreen || document.webkitExitFullscreen).call(document);
+    else { const r = (el.requestFullscreen || el.webkitRequestFullscreen).call(el, { navigationUI: 'hide' }); if (r && r.catch) r.catch(() => {}); } };
+  document.addEventListener('pointerdown', (e) => { if (!$('fsTip').contains(e.target) && !$('fsBtn').contains(e.target)) $('fsTip').hidden = true; });
 }
 $('helpBtn').onclick = (e) => { e.stopPropagation(); $('helpSheet').hidden = !$('helpSheet').hidden; $('viewsPop').hidden = true; };
 document.addEventListener('pointerdown', (e) => { if (!$('helpSheet').contains(e.target) && e.target !== $('helpBtn')) $('helpSheet').hidden = true; if (!$('viewsPop').contains(e.target) && !$('cViews').contains(e.target)) $('viewsPop').hidden = true; if (!$('layoutPop').contains(e.target) && !$('cLayout').contains(e.target)) $('layoutPop').hidden = true; });
