@@ -1,0 +1,35 @@
+Copyright © 2026 ThinkPro Academy. All rights reserved.
+
+STRICT COPYRIGHT NOTICE — NO LICENSE GRANTED
+
+This repository, including the 1st-floor walkthrough, its source code
+(HTML, CSS, JavaScript), the 3D model and all of its geometry, textures,
+materials, derived data files (model.*.bin, visibility.json, stream.json)
+and every other asset contained herein (collectively, the "Work"), is the
+exclusive property of ThinkPro Academy and its licensors.
+
+The Work is published publicly for viewing in a web browser ONLY. Public
+visibility does NOT place the Work in the public domain and does NOT grant
+any license. All rights are reserved.
+
+You MAY NOT, without the prior written permission of the copyright holder:
+
+  1. Copy, reproduce, mirror, re-host, redistribute or republish the Work
+     or any part of it, in whole or in part, in any medium.
+  2. Modify, adapt, translate, reverse-engineer, decompile or create
+     derivative works from the Work or its 3D model.
+  3. Use the Work, or any part of it, as training data, as input to, or as
+     reference material for any machine-learning or artificial-intelligence
+     system, model, dataset or product; and you may not permit any automated
+     agent operated by or for you to do so.
+  4. Use the Work for any commercial purpose.
+  5. Remove, obscure or alter any copyright, attribution or ownership notice.
+
+The publication of the human-readable source does not waive any of the
+above. Cloning this repository, forking it, downloading the model, or
+scraping the deployed site constitutes acceptance of these terms where
+permitted by law, and does not transfer any ownership or license.
+
+THE WORK IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
+
+For permissions and licensing enquiries: support@thinkpro.academy

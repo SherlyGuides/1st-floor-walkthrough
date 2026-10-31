@@ -9,3 +9,19 @@ Walk through the 1st floor in any browser, on a laptop or a phone. Nothing to in
 - **Orbit, Walk, Fly** at the bottom switch between looking at the whole floor and walking through it.
 
 Made with [walkable](https://sherlyguides.github.io/walkables/).
+
+---
+
+## Copyright
+
+Copyright © 2026 ThinkPro Academy. **All rights reserved.**
+
+This walkthrough, its source code, its 3D model and every asset in this
+repository are copyright-protected and published for **viewing in a browser
+only**. Making this page public does **not** grant any license.
+
+You may not copy, mirror, re-host, redistribute, modify, reverse-engineer,
+or use any part of it — including the 3D model and data files — as training
+data or input for any AI / machine-learning system. See [LICENSE](LICENSE).
+
+Permissions and licensing: **support@thinkpro.academy**
